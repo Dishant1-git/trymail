@@ -6,7 +6,15 @@ const cors = require('cors')
 const{ MailerSend, Sender, Recipient, EmailParams } = require("mailersend");
 
 
-app.use(cors())
+const corsfront={
+    origin:["https://trymail.vercel.app/"],
+    credentials:true
+}
+
+app.use(cors(corsfront))
+
+
+
 app.use(express.json())
 
 app.listen(9000,()=>{
