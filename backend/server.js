@@ -7,7 +7,7 @@ const{ MailerSend, Sender, Recipient, EmailParams } = require("mailersend");
 
 
 const corsfront={
-    origin:["https://trymail.vercel.app/"],
+    origin:["https://trymail.vercel.app"],
     credentials:true
 }
 
