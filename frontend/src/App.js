@@ -9,7 +9,7 @@ const[mail,setmail]=useState('')
 
 
 const send=async()=>{
-  const result=await fetch('http://localhost:9000/api/nodemail',{
+  const result=await fetch('https://trymail.onrender.com/api/nodemail',{
     method:'POST',
     headers:{
       'Content-Type':'application/json'
