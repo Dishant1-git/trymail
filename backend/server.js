@@ -55,9 +55,21 @@ app.post('/api/nodemail', async (req, res) => {
         console.log(result, "result from mailersend")
         res.send({ statuscode: 1, message: "Email sent Succesfully" })
     } catch (error) {
-        console.log(error, "error from mailersend")
-        res.send({ statuscode: 0, message: "Error ocuured while Sending mail" })
-    }
+
+    console.log(
+        error.response?.body ||
+        error.message ||
+        error,
+        "FULL MAILERSEND ERROR"
+    );
+
+    res.send({
+        statuscode: 0,
+        error:
+            error.response?.body ||
+            error.message
+    });
+}
 
 })
 
