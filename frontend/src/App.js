@@ -22,6 +22,7 @@ if(result.ok){
     alert("Email sent successfully!")
   } else {
     alert("Error occurred while sending email.")
+    console.log(data.error);
   }
 }
 
