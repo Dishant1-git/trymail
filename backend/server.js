@@ -67,7 +67,9 @@ app.post('/api/nodemail', async (req, res) => {
         statuscode: 0,
         error:
             error.response?.body ||
-            error.message
+            error.message||
+              JSON.stringify(error) ||
+            "Unknown Error"
     });
 }
 
